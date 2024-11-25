@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* ***************************type*************************** */
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+button {
+  font-family: Lato, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #4a5b48;
+  line-height: 2.8rem;
+}
+
+h1,
+h2 {
+  font-family: Bodoni Moda, serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+nav a {
+  font-weight: 900;
+}
+
+/* ***************************layout*************************** */
+
+body {
+  background-color: antiquewhite;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+/* ******************header****************** */
+
+nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: antiquewhite;
+} */
+
+.nav-left,
+.nav-right {
+  width: 340px;
+}
+
+.nav-left,
+.navbar-collapse-left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.nav-right,
+.navbar-collapse-right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.logo {
+  height: 72px;
+}
+
+nav a,
+.current-page:hover {
+  color: #798e76;
+  padding: 10px;
+  display: inline-block;
+}
+
+nav a:hover,
+.dropdown-content a,
+.current-page {
+  color: #4a5b48;
+}
+
+.dropdown-content a:hover {
+  color: #2d372c;
+}
+
+nav a:active {
+  color: #4a5b48ae;
+}
+
+.current-page:active {
+  color: #798e76ae;
+}
+
+.dropdown-content a:active {
+  color: #2d372cae;
+}
+
+.navbar-full,
+.navbar-collapse {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: antiquewhite;
+}
+
+.navbar-collapse-left,
+.navbar-collapse-right {
+  width: 60px;
+}
+
+.nav-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 1;
+  padding: 31px 20px;
+  top: 0;
+  left: 0;
+  background-color: #798e76;
+  z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-collapse-left:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+/* ******************footer****************** */
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  background-color: antiquewhite;
+}
+
+address {
+  font-style: normal;
+}
+
+img.icon {
+  height: 20px;
+  width: auto;
+  margin: 0 20px;
+}
+
+/* ******************content-home****************** */
+
+.content {
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+/* ************hero space************ */
+
+.hero-space {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.bunny-left,
+.bunny-right {
+  position: absolute;
+  bottom: 20%;
+}
+
+.bunny-left {
+  width: 115px;
+  left: -30%;
+}
+
+.bunny-right {
+  width: 148px;
+  right: -35%;
+}
+
+.hero-space-subject,
+.hero-space-description {
+  display: block;
+  margin: 24px 0;
+}
+
+.hero-space-subject {
+  font-family: Oswald, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 300;
+}
+
+.hero-space-description {
+  font-family: Bodoni Moda, serif;
+  font-size: 13.6rem;
+  font-weight: 400;
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #4a5b48;
+  padding: 8px 20px;
+  margin-top: 36px;
+}
+
+button:hover {
+  background-color: #4a5b48;
+  border: 1px solid transparent;
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #4a5b48ae;
+}
+
+/* ************brief about me************ */
+
+.brief-about {
+  display: flex;
+  flex-direction: column;
+  margin: 300px auto;
+  padding: 48px;
+  height: 360px;
+  width: 560px;
+  background-color: rgb(246, 207, 207);
+  box-shadow: 0 1px 6px rgb(219, 185, 185);
+}
+
+h2.brief-about-inner,
+p.brief-about-inner {
+  color: rgb(105, 51, 68);
+  text-align: center;
+}
+
+h2.brief-about-inner {
+  margin: 8px 0 16px 0;
+}
+
+div.center-align {
+  margin: 0 auto;
+  margin-top: 36px;
+}
+
+button.brief-about-inner {
+  margin-top: 0;
+  border: 1px solid rgb(105, 51, 68);
+  color: rgb(105, 51, 68);
+}
+
+button.brief-about-inner:hover {
+  background-color: rgb(105, 51, 68);
+  border: 1px solid transparent;
+  color: rgb(246, 207, 207);
+}
+
+button.brief-about-inner:active {
+  background-color: rgba(105, 51, 68, 0.75);
+}
+
+/* ************brief portfolio************ */
+
+.image-row,
+.image-full {
+  display: flex;
+  align-items: stretch;
+  height: 30%;
+  margin: 20px 0;
+}
+
+.image-row {
+  flex-direction: row;
+}
+
+.image-short,
+.image-wide,
+.image-full {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  background-color: #4a5b48;
+}
+
+.image-short {
+  width: 40%;
+}
+
+.image-wide {
+  width: 59%;
+}
+
+.image-inside {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: antiquewhite;
+  font-weight: 400;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+button.view-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10px 36px auto;
+}
+
+#vase-wide,
+#sewing-machine-wide {
+  display: none;
+}
+
+/* ******************hover effect****************** */
+
+.image-short:hover .image-inside,
+.image-wide:hover .image-inside,
+.image-full:hover .image-inside {
+  opacity: 0.1;
+}
+
+.image-short:hover .overlay-text,
+.image-wide:hover .overlay-text,
+.image-full:hover .overlay-text {
+  opacity: 1;
+}
+
+/* ******************content-about****************** */
+
+section.about {
+  position: relative;
+  left: 5%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 420px;
+  width: 600px;
+  margin: 150px auto 36px auto;
+  padding: 36px;
+  padding-left: 200px;
+  background-color: rgb(246, 207, 207);
+  box-shadow: 0 1px 6px rgb(219, 185, 185);
+}
+
+h1.about,
+p.about {
+  color: rgb(105, 51, 68);
+}
+
+h1.about {
+  text-align: right;
+}
+
+img.megan {
+  display: block;
+  position: absolute;
+  width: 300px;
+  left: -20%;
+  top: -20%;
+}
+
+.butterfly {
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+  width: 17%;
+}
+
+/* ******************content-contact****************** */
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 550px;
+  width: 600px;
+  margin: 100px auto 36px auto;
+  padding: 20px;
+  background-color: rgb(246, 207, 207);
+  box-shadow: 0 1px 6px rgb(219, 185, 185);
+}
+
+.textfield,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(188, 112, 136);
+}
+
+.textfield:focus,
+textarea:focus {
+  outline: none;
+}
+
+h1.contact,
+::placeholder {
+  color: rgb(105, 51, 68);
+}
+
+::placeholder,
+input.textfield,
+textarea {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+label.contact,
+input.textfield,
+textarea {
+  padding: 6px 12px;
+  color: rgb(175, 99, 123);
+}
+
+input.textfield,
+textarea {
+  width: 240px;
+}
+
+input.textfield:hover,
+input.textfield:focus,
+textarea:hover,
+textarea:focus {
+  background-color: rgb(237, 190, 195);
+  border-bottom: 1px solid transparent;
+}
+
+textarea {
+  resize: none;
+  width: 480px;
+}
+
+button.contact {
+  display: block;
+  margin: 36px auto 0 auto;
+  border: 1px solid rgb(175, 99, 123);
+  color: rgb(175, 99, 123);
+}
+
+button.contact:hover {
+  background-color: rgb(175, 99, 123);
+  border: 1px solid transparent;
+  color: rgb(246, 207, 207);
+}
+
+button.contact:active {
+  background-color: rgba(175, 99, 123, 0.75);
+}
+
+div.form {
+  position: relative;
+  display: inline-block;
+}
+
+.bird {
+  position: absolute;
+  right: 6%;
+  top: 2%;
+  width: 30%;
+}
+
+/* *****************************This is for small-screen laptops***************************** */
+
+@media (min-width: 769px) and (max-width: 969px) {
+  /* *********************header********************* */
+  .navbar-full {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+  }
+
+  /* ************hero space************ */
+  .bunny-left {
+    width: 96px;
+    left: -33%;
+  }
+
+  .bunny-right {
+    width: 120px;
+    right: -37%;
+  }
+
+  .hero-space-subject,
+  .hero-space-description {
+    margin: 12px 0;
+  }
+
+  .hero-space-subject {
+    font-size: 2.8rem;
+  }
+
+  .hero-space-description {
+    font-size: 10rem;
+  }
+  /* ******************content-about****************** */
+
+  section.about {
+    left: 7%;
+  }
+}
+/* *****************************This is for iPads***************************** */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* *********************header********************* */
+  .navbar-full {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+  }
+
+  /* ************hero space************ */
+  .bunny-left,
+  .bunny-right {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hero-space {
+    margin-top: 15%;
+  }
+
+  .hero-space-subject,
+  .hero-space-description {
+    margin: 12px 0;
+  }
+
+  .hero-space-subject {
+    font-size: 2.8rem;
+  }
+
+  .hero-space-description {
+    font-size: 10rem;
+  }
+
+  /* ************brief about me************ */
+
+  .brief-about {
+    width: 440px;
+    margin: 100px auto;
+  }
+
+  /* ************brief portfolio************ */
+
+  .image-row {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .image-short,
+  .image-wide {
+    width: fit-content;
+    margin: 20px 10px;
+  }
+
+  .image-full {
+    margin: 20px 10px;
+    margin-bottom: 10px;
+  }
+
+  #vase-short,
+  #sewing-machine-short {
+    display: none;
+  }
+
+  #vase-wide,
+  #sewing-machine-wide {
+    display: block;
+  }
+
+  /* ******************content-about****************** */
+
+  section.about {
+    left: 0;
+    align-items: center;
+    height: fit-content;
+    width: 400px;
+    margin: 100px auto 136px auto;
+    padding: 36px;
+  }
+
+  h1.about {
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  img.megan {
+    order: -1;
+    display: block;
+    position: static;
+  }
+
+  .butterfly {
+    right: 8%;
+    bottom: 3%;
+  }
+
+  /* ******************content-contact****************** */
+
+  .contact-form {
+    height: fit-content;
+    width: 456px;
+  }
+
+  label.contact,
+  input.textfield {
+    width: 200px;
+  }
+
+  textarea {
+    width: 360px;
+  }
+
+  button.contact {
+    margin-bottom: 36px;
+  }
+
+  .bird {
+    right: 0%;
+    top: 5%;
+  }
+}
+
+/* *****************************This is for mobile***************************** */
+
+@media (max-width: 480px) {
+  /* *********************header********************* */
+  .navbar-full {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+  }
+
+  /* ************hero space************ */
+  .bunny-left,
+  .bunny-right {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hero-space {
+    margin-top: 20%;
+  }
+
+  .hero-space-subject,
+  .hero-space-description {
+    margin: 8px 0;
+  }
+
+  .hero-space-subject {
+    font-size: 2.4rem;
+  }
+
+  .hero-space-description {
+    font-size: 8rem;
+  }
+
+  /* ************brief about me************ */
+
+  .brief-about {
+    width: 296px;
+    margin-top: 30%;
+  }
+  /* ************brief portfolio************ */
+
+  #brief-portfolio {
+    margin-top: -60%;
+  }
+
+  .image-row {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .image-short,
+  .image-wide {
+    width: fit-content;
+    margin: 10px 10px;
+  }
+
+  .image-full {
+    margin: 10px 10px;
+    margin-bottom: 2px;
+  }
+
+  #vase-short,
+  #sewing-machine-short {
+    display: none;
+  }
+
+  #vase-wide,
+  #sewing-machine-wide {
+    display: block;
+  }
+
+  /* ******************content-about****************** */
+
+  section.about {
+    left: 0;
+    align-items: center;
+    height: fit-content;
+    width: 300px;
+    margin: 100px auto 136px auto;
+    padding: 36px;
+  }
+
+  h1.about {
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  img.megan {
+    order: -1;
+    position: static;
+    display: block;
+    width: 240px;
+  }
+
+  .butterfly {
+    right: 8%;
+    bottom: 3%;
+  }
+
+  /* ******************content-contact****************** */
+
+  .contact-form {
+    height: fit-content;
+    width: 300px;
+  }
+
+  .form {
+    padding-top: 33%;
+  }
+
+  label.contact,
+  input.textfield,
+  textarea {
+    width: 240px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  button.contact {
+    margin-bottom: 36px;
+  }
+
+  .bird {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
